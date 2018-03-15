@@ -1,0 +1,27 @@
+<app-header [newTitle]="title"></app-header>
+
+<div class="container">
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Size</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let puppy of puppies" [class.hilight]="puppy.age == 9">
+        <th>{{puppy.name}} <span class="badge" *ngIf="puppy.knowsTricks">Smart</span></th>
+        <th>{{puppy.age}}</th>
+        <th>{{puppy.size}}</th>
+        <th>
+          <button (click)="teachTrick(puppy)">Teach me a trick</button>
+          <!--button (click)="setAge(puppy, puppy.age+1)">Teach me a trick</button -->
+        </th>
+      </tr>
+    </tbody>
+  </table>
+
+</div><!-- /.container -->

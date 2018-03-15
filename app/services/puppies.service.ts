@@ -16,7 +16,7 @@ export class PuppiesService {
       size: '0.4m',
       knowsTricks: true
     }, {
-      name: 'Idiot',
+      name: 'Chubby',
       age: 24,
       size: '2m',
       knowsTricks: false
